@@ -1,0 +1,41 @@
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.getId() == 'com.kwai.kim.module') {
+                useModule('com.kwai.kim.module_suite:module-plugin:0.0.10')
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            url 'http://nexus.corp.kuaishou.com:88/nexus/content/groups/public/'
+            allowInsecureProtocol(true)
+        }
+        maven {
+            url 'http://nexus.corp.kuaishou.com:88/nexus/content/repositories/release/'
+            allowInsecureProtocol(true)
+        }
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven {
+            url 'http://nexus.corp.kuaishou.com:88/nexus/content/groups/public/'
+            allowInsecureProtocol(true)
+        }
+        maven {
+            url 'http://nexus.corp.kuaishou.com:88/nexus/content/repositories/release/'
+            allowInsecureProtocol(true)
+        }
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "TestApplication2"
+include ':app'
+include ':inspect'
