@@ -39,3 +39,4 @@ dependencyResolutionManagement {
 rootProject.name = "TestApplication2"
 include ':app'
 include ':inspect'
+include ':lib'
