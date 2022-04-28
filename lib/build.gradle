@@ -11,5 +11,5 @@ dependencies {
     // https://mvnrepository.com/artifact/com.android.tools.build/gradle
     implementation 'com.android.tools.build:gradle:7.1.2'
     implementation gradleApi()
-    implementation project(":lib2")
+//    implementation project(":lib2")
 }
