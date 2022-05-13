@@ -1,0 +1,18 @@
+package me.luhaoyu.testapplication2;
+
+import android.os.Bundle;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_main);
+        System.out.println(R.string.my_ccc);
+        System.out.println(com.kwai.kim.router_android.R.id.nav_router);
+    }
+}
