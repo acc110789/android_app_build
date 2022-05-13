@@ -7,5 +7,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val kk = R.string.my_ccc
+        val navRouter = com.kwai.kim.router_android.R.id.nav_router
     }
 }

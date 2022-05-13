@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "me.luhaoyu.testapplication2"
-        minSdk 24
+        minSdk 23
         targetSdk 31
         versionCode 1
         versionName "1.0"
@@ -18,16 +18,18 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            resValue "string", "my_ccc", "app_release"
         }
         debug {
             buildConfigField "String", "mUrl", "BuildConfig.APPLICATION_ID"
+            resValue "string", "my_ccc", "app_debug"
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -42,4 +44,5 @@ dependencies {
 
     implementation 'com.kwai.kim.module_suite:module-base:0.0.1'
     implementation 'com.kwai.kim.module_suite:module-android:0.0.5'
+    implementation 'com.kwai.kim.router_suite:router-android:0.1.30'
 }
